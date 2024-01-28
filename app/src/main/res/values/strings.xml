@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PicaShow</string>
+    <string name="tutorial_url_1">https://mblogthumb-phinf.pstatic.net/MjAxOTAzMTlfMjYy/MDAxNTUyOTI4OTcyMDgw.USYJbzqsCIe02lwsQ1qNSodtNFKKeaIumsOMNio-ffcg.g27f78YWMeUuZCjOh8PeZrMODh6o1S8AtOEXDENwb9og.JPEG.hongseull/%EB%A7%88%EB%85%80%EB%B0%B0%EB%8B%AC%EB%B6%80_%ED%82%A4%ED%82%A4.jpg?type=w800</string>
+    <string name="tutorial_url_2">https://i.pinimg.com/564x/5e/7c/e1/5e7ce110221f9dbc96579c978da62aa8.jpg</string>
+    <string name="tutorial_url_3">https://i.pinimg.com/originals/22/de/92/22de92092890e1540ca5015818f5c3cd.jpg</string>
+    <string name="tutorial_url_4">https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu3WFtOVor0CH59xCanFxZ21wDCyUueV7jPg&amp;usqp=CAU</string>
+    <string name="tutorial_url_5">https://images.unsplash.com/photo-1659951345629-091600ae202c?auto=format&amp;fit=crop&amp;q=80&amp;w=435&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D</string>
+    <string name="tutorial_url_6">https://mblogthumb-phinf.pstatic.net/MjAxODAxMjFfMTMy/MDAxNTE2NTQyOTA0Mzk3.sodrPAj7QOabX0S6tKObbbAGo9xXkX3QiauDEU0ShTgg.olNXD3GdYDF3JH9C36dnI1NUuuJdcfv61uBTCVR2c1Eg.JPEG.knicjin/20180121-010.jpg?type=w800</string>
+</resources>

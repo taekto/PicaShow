@@ -1,0 +1,48 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build Dockerimage') {
+            steps{
+                dir('WebUIAPI') {
+                    // FastAPI 애플리케이션을 도커 이미지로 빌드
+                    script {
+                        sh 'cd /var/jenkins_home/workspace/backend-fastAPI/WebUIAPI'
+                        sh 'ls'
+                        sh 'docker build -t freepjt:1.0 -f Dockerfile.Dockerfile .'
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                dir('WebUIAPI') {
+                    sh '''
+                        # Docker 컨테이너가 존재하는지 확인
+                        if docker ps -a --format "{{.Names}}" | grep -q "^freepjt"; then
+                            # 컨테이너가 존재할 때만 중지 시도
+                            docker stop freepjt
+		   docker rm freepjt
+                        else
+                            # 컨테이너가 존재하지 않으면 메시지 출력
+                            echo "컨테이너 'freepjt'를 찾을 수 없습니다."
+                        fi
+                        
+                        docker container run -d -p 127.0.0.1:8081:8000 --name freepjt freepjt:1.0
+                        '''
+                }
+            }
+        }
+    }
+    post {
+        success {
+            // 빌드 성공 시 실행되는 코드 (예: 알림 전송, 기타 작업 등)
+            echo 'Deployment successful!'
+        }
+
+        failure {
+            // 빌드 실패 시 실행되는 코드 (예: 알림 전송, 로그 수집 등)
+            echo 'Deployment failed!'
+        }
+    }
+}
